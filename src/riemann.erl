@@ -235,7 +235,7 @@ setup_tcp_socket(#state{tcp_socket=undefined, host=Host, port=Port}=S) ->
 setup_tcp_socket(S) -> S.
 
 get_env(Name, Default) ->
-  case application:get_env(riemann, Name) of
+  case application:get_env(erlang_riemann, Name) of
     {ok, V} -> V;
     _ -> Default
   end.
